@@ -8,7 +8,5 @@ def word_unscrambler(str, words)
       []
     end
   end
-
   anagram_array
-
 end

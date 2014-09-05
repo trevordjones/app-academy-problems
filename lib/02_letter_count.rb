@@ -1,7 +1,7 @@
 def letter_count(str)
   hash = {}
   hash_value = 1
-  str.gsub(' ', '').split("").each do |pair|
+  str.gsub(" ", "").split("").each do |pair|
     key,value = pair.split(//)
     unless hash[key]
       hash_value = 1
