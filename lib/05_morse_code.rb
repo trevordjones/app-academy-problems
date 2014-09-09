@@ -1,9 +1,4 @@
-def morse_encode(str)
-  morse_encode_word(str)
-end
-
-def morse_encode_word(word)
-  morse = {
+MORSE = {
     "A" => ".-",
     "B" => "-...",
     "C" => "-.-.",
@@ -31,7 +26,13 @@ def morse_encode_word(word)
     "Y" => "-.--",
     "Z" => "--.."
   }
+
+def morse_encode(str)
+  morse_encode_word(str)
+end
+
+def morse_encode_word(word)
   letters = word.split("")
-  morse_code = letters.map { |letter| morse[letter.upcase] }
+  morse_code = letters.map { |letter| MORSE[letter.upcase] }
   morse_code.join(" ")
 end

@@ -1,8 +1,8 @@
 def word_unscrambler(str, words)
-  array_str = str.split("").sort
+  sorted_string = str.split("").sort
   anagram_array = []
   words.each do |word|
-    if word.split("").sort == array_str
+    if word.split("").sort == sorted_string
       anagram_array << word
     else
       []
