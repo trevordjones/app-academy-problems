@@ -1,15 +1,7 @@
 def letter_count(str)
-  hash = {}
-  hash_value = 1
-  str.gsub(" ", "").split("").each do |pair|
-    key,value = pair.split(//)
-    unless hash[key]
-      hash_value = 1
-      hash[key] = hash_value
-    else
-      hash_value += 1
-      hash[key] = hash_value
-    end
+  letter_frequencies = Hash.new(0)
+  str.delete(" ").split("").each do |letter|
+    letter_frequencies[letter] += 1
   end
-  return Hash[hash.sort_by &:first] 
+  letter_frequencies
 end
