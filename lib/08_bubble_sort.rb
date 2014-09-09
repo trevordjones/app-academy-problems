@@ -1,6 +1,5 @@
 def bubble_sort(arr)  
-  swapped = true
-  while swapped
+  begin
     swapped = false
     arr.length.times do |number|
       unless arr[number+1] == nil
@@ -9,11 +8,9 @@ def bubble_sort(arr)
           arr[number] = arr[number + 1]
           arr[number + 1] = holder
           swapped = true
-          end
         end
       end
-  end
+    end
+  end while swapped
   arr
 end
-
-
